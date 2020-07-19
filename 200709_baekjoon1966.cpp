@@ -29,7 +29,7 @@ public:
 		} while(i!=stdPt); 
 		return toIndex(i+1); //입력 우선순위 요소가 없을 경우 입력+1 우선순위의 마지막 인덱스 반환
 	}
-  // index의 요소이 몇번째로 출력 되는가
+  // index의 요소이 몇번째로 출력되는지 반환
 	int whenItemOut(int index) {
 		int prior = queue[index];
 		for(int i=0; i<length; i++)	if(queue[i]>prior) outCnt++;
