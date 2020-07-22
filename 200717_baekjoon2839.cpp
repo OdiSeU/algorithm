@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-	int kg, cnt=0;
+	int kg,cnt=0;
 	cin >> kg;
 	while(kg%5){
 		kg -= 3;
