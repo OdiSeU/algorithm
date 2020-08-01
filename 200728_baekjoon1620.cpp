@@ -4,9 +4,14 @@
 using namespace std;
 
 int findPokeIdx(string* pokeArr, int pokeNum, string pokeName) {
-	for (int i = 0; i < pokeName.size(); i++) {
-		for (int j = 0; j < pokeNum; j++) {
-			if (pokeArr[j][i]) {} // 추가
+	list<string> pokeList;
+	for (int i = 0; i < pokeNum; i++) {
+		if(pokeArr[i][0]==pokeName[0]) pokeList.push_back(pokeArr[i]);
+	}
+	for (int i = 1; i < pokeName.size(); i++) {
+		list<string>::iterator iter = pokeList.begin();
+		while (iter != pokeList.end()) {
+			if(pokeList[iter][i] != pokeName[i])
 		}
 	}
 }
